@@ -1,11 +1,7 @@
 import * as React from 'react';
-
-export interface ScreenProps {
-  
-}
  
-const Screen: React.SFC<ScreenProps> = () => {
-  return (  );
+const Screen: React.SFC = () => {
+  return <h1>Screen</h1>;
 }
  
 export default Screen;
