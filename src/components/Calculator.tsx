@@ -1,4 +1,4 @@
-import React, { useState, ReactText, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Screen from './Screen';
 import Numpad from './Numpad';
