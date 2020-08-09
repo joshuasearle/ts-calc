@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import Screen from '../components/Screen';
-import Numpad from '../components/Numpad';
+import Screen from './Screen';
+import Numpad from './Numpad';
 
 const Calculator: React.SFC = () => {
   return (
