@@ -1,3 +1,4 @@
 export default {
-  container: 'container'
-}
+  container: 'container',
+  calculator: 'calculator',
+};

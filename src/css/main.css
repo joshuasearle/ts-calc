@@ -2,13 +2,28 @@
 *::before,
 *::after {
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
 
+html,
 body {
   background-color: aquamarine;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+div#root {
+  height: 100%;
 }
 
 .container {
-  background-color: red;
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.calculator {
+  background-color: #001f4d;
 }
