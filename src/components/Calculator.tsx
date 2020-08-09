@@ -7,7 +7,7 @@ import classes from '../css/classes';
 const Calculator: React.SFC = () => {
   return (
     <div className={classes.calculator}>
-      <Screen />
+      <Screen output='random text' />
       <Numpad />
     </div>
   );

@@ -27,3 +27,13 @@ div#root {
 .calculator {
   background-color: #001f4d;
 }
+
+.screen {
+  background-color: #ffffff;
+  margin: 0.5em;
+}
+
+.screen-output {
+  margin: 0.5em;
+  text-align: center;
+}
