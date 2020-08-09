@@ -5,7 +5,7 @@ import Numpad from './Numpad';
 
 const Calculator: React.SFC = () => {
   return (
-    <div className={'calc-container'}>
+    <div className='container'>
       <Screen />
       <Numpad />
     </div>
