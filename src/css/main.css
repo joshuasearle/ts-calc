@@ -3,11 +3,13 @@
 *::after {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
+  font-size: 1.5rem;
+  color: #0f0f24;
 }
 
 html,
 body {
-  background-color: aquamarine;
+  background-color: #4a4a9b;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -25,15 +27,41 @@ div#root {
 }
 
 .calculator {
-  background-color: #001f4d;
+  background-color: #0f0f24;
+  border-radius: 0.5rem;
 }
 
 .screen {
   background-color: #ffffff;
-  margin: 0.5em;
+  margin: 0.4em 0.4em 0 0.4em;
+  padding: 0.7em 1.3em;
+  border-radius: 0.5rem;
 }
 
 .screen-output {
-  margin: 0.5em;
-  text-align: center;
+  text-align: right;
+  margin: 0;
+}
+
+.numpad {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0.2em;
+}
+
+.button {
+  margin: 0.2em;
+  padding: 0.5em 0.5em;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+.button--other {
+  background-color: #4a4a9b;
+  color: white;
+}
+
+.button--operator {
+  background-color: #c2c2ff;
 }
