@@ -9,7 +9,7 @@ interface ScreenProps {
 const Screen: React.SFC<ScreenProps> = ({ output }) => {
   return (
     <div className={classes.screen}>
-      <p className={classes.screenOutput}>{output}</p>
+      <p className={classes.screenOutput}>{output ? output : '0'}</p>
     </div>
   );
 };
