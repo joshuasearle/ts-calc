@@ -31,6 +31,8 @@ const Calculator: React.SFC = () => {
 
     if (!isNaN(+value) && !isNaN(+top)) {
       stackCopy[n - 1] = top + value;
+    } else if (value === '.') {
+      stackCopy[n - 1] = top + value;
     } else {
       stackCopy.push(value);
     }
