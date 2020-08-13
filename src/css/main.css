@@ -29,6 +29,7 @@ div#root {
 .calculator {
   background-color: #0f0f24;
   border-radius: 0.5rem;
+  box-shadow: 0 0 30px 20px rgba(0, 0, 0, 0.3);
 }
 
 .screen {
@@ -55,6 +56,7 @@ div#root {
   padding: 0.5em 0.5em;
   border: 0;
   border-radius: 0.5rem;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .button--other {
