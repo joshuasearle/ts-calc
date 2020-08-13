@@ -39,13 +39,12 @@ const Calculator: React.SFC = () => {
 
   const evaluate = () => {
     const stackCopy: Array<string> = [...stack];
-    // remove last operator
+    // remove last operator to improve chance of success
     const top = stackCopy[stackCopy.length - 1];
     if (isNaN(+top) && top !== '(' && top !== ')') stackCopy.pop();
 
     try {
       const result = eval(stackCopy.join(''));
-
       const resultStack: Array<string> = [result.toString()];
       setStack(resultStack);
     } catch (e) {
@@ -54,17 +53,7 @@ const Calculator: React.SFC = () => {
   };
 
   const handleChar = (value: string) => {
-    const top = stack[stack.length - 1];
-    const topIsNum = !isNaN(+top);
-    const valueIsNum = !isNaN(+value);
-
-    if (value === '.' && !valueIsNum) return;
-    if (value === '(' && topIsNum && top !== ')') return;
-    if (value === ')' && !topIsNum && top !== ')') return;
-    if (!topIsNum && !valueIsNum && value !== '(' && value !== ')') return;
-
     const stackCopy = [...stack];
-
     stackCopy.push(value);
     setStack(stackCopy);
   };
