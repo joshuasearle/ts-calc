@@ -48,11 +48,13 @@ const Calculator: React.SFC = () => {
       const resultStack: Array<string> = [result.toString()];
       setStack(resultStack);
     } catch (e) {
-      reset();
+      setStack(['Invalid operation']);
+      setTimeout(reset, 650);
     }
   };
 
   const handleChar = (value: string) => {
+    if (stack[stack.length - 1] == 'Invalid operation') return;
     const stackCopy = [...stack];
     stackCopy.push(value);
     setStack(stackCopy);
