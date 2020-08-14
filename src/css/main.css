@@ -53,12 +53,13 @@ div#root {
 }
 
 .button {
-  height: 2.5em;
-  width: 2.5em;
+  height: 1.8em;
+  width: 1.8em;
   margin: 0.2em;
   border: 0;
   border-radius: 0.5rem;
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
 }
 
 .button--other {
