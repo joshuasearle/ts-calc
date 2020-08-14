@@ -7,7 +7,6 @@ import classes from '../css/classes';
 const Calculator: React.SFC = () => {
   const initialState: Array<string> = [];
   const [stack, setStack] = useState(initialState);
-  console.log(stack);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeypress);
@@ -25,7 +24,6 @@ const Calculator: React.SFC = () => {
       newStack.pop();
       setStack(newStack);
     } else {
-      console.log(newStack);
       const choppedTop = top.slice(0, top.length - 1);
       newStack[newStack.length - 1] = choppedTop;
       setStack(newStack);
@@ -44,17 +42,25 @@ const Calculator: React.SFC = () => {
     if (isNaN(+top) && top !== '(' && top !== ')') stackCopy.pop();
 
     try {
-      const result = eval(stackCopy.join(''));
-      const resultStack: Array<string> = [result.toString()];
+      let result = eval(stackCopy.join('')).toString();
+      const digitCount = result.toString().length;
+      const decimalPlaces = (result % 1).toString().length;
+      if (digitCount > 10 && digitCount - decimalPlaces <= 10) {
+        result = result.slice(0, 5);
+      } else if (digitCount > 10) {
+        result = (+result).toExponential().toString();
+      }
+      const resultStack: Array<string> = result.split('');
       setStack(resultStack);
     } catch (e) {
-      setStack(['Invalid operation']);
-      setTimeout(reset, 650);
+      setStack(['Invalid']);
+      setTimeout(reset, 800);
     }
   };
 
   const handleChar = (value: string) => {
-    if (stack[stack.length - 1] == 'Invalid operation') return;
+    if (stack[stack.length - 1] == 'Invalid') return;
+    if (stack.length >= 10) return;
     const stackCopy = [...stack];
     stackCopy.push(value);
     setStack(stackCopy);
@@ -76,7 +82,7 @@ const Calculator: React.SFC = () => {
         output.push(current);
       }
     }
-    return output.join(' ');
+    return output.join('');
   };
 
   return (
