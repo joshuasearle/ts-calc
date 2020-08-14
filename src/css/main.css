@@ -3,7 +3,7 @@
 *::after {
   font-family: 'Roboto Mono', monospace;
   box-sizing: border-box;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #0f0f24;
 }
 
@@ -34,8 +34,8 @@ div#root {
 
 .screen {
   background-color: #ffffff;
-  margin: 0.4em 0.4em 0 0.4em;
-  padding: 0.7em 1.3em;
+  margin: 0.4rem 0.4rem 0 0.4rem;
+  padding: 0.5em 0.8em;
   border-radius: 0.5rem;
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
 }
@@ -49,17 +49,16 @@ div#root {
   display: grid;
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(4, 1fr);
-  padding: 0.2em;
+  padding: 0.2rem;
 }
 
 .button {
   height: 1.8em;
   width: 1.8em;
-  margin: 0.2em;
+  margin: 0.2rem;
   border: 0;
   border-radius: 0.5rem;
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
-  font-size: 2rem;
 }
 
 .button--other {
