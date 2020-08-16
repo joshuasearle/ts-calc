@@ -70,3 +70,11 @@ div#root {
   background-color: #a9a9ff;
 }
 
+@media (max-width: 600px) {
+  *,
+  *::before,
+  *::after {
+    font-size: 1.5rem;
+  }
+}
+
